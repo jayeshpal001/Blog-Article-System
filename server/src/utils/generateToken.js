@@ -14,10 +14,10 @@ const generateToken = (userId, role, res) => {
   res.cookie('token', token, {
     httpOnly: true, 
     secure: true, 
-    sameSite: "strict", 
+    sameSite: "none", 
     maxAge: 24*60*60*1000
   })
-  return token 
+  
 };
 
 module.exports = generateToken; 

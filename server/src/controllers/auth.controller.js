@@ -14,7 +14,7 @@ exports.register = asyncHandler(async (req, res) => {
         throw new Error("User already exist, Please login");
     }
     const hashedPass = await bcrypt.hash(password, 10); 
-    const user = await User.create({name, email, password: hashedPass, role}); 
+      await User.create({name, email, password: hashedPass, role}); 
     res.status(201).json({
         success: true, 
         message: "User Register Successfully", 
@@ -37,7 +37,7 @@ exports.login = asyncHandler(async (req, res) => {
         res.status(400)
         throw new Error("Invalid credentials");
     }
-    const token = generateToken(user._id, user.role, res); 
+    generateToken(user._id, user.role, res); 
     res.status(201).json({
         success: true, 
         message: "User Login Successfully", 
