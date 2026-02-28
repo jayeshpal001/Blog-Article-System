@@ -1,0 +1,37 @@
+# Dependency directories
+node_modules/
+
+# Build output directories
+dist/
+build/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# IDE and OS specific files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+*.swp
+
+# Log and temporary files
+logs/
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+
+# Client-specific (if applicable to a subdirectory)
+client/build/
+client/dist/
+
+# Server-specific (if applicable to a subdirectory)
+server/build/
+server/dist/
